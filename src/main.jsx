@@ -1,14 +1,19 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App";
 import "./index.css";
+// import CounterApp from "./CounterApp";
+// import PokeApp from "./PokeApp";
+// ReduxToolkit
 import { store } from "./store";
 import { Provider } from "react-redux";
+import TodoAppRTK from "./TodoAppRTK";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <Provider store={store}>
-      <App />
+      {/* <CounterApp /> */}
+      {/* <PokeApp /> */}
+      <TodoAppRTK />
     </Provider>
   </React.StrictMode>
 );

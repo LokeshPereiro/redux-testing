@@ -11,3 +11,15 @@
 
 useSlector() -> me permite seleccionar los distintos estados
 useDispatch() -> despachar la accion
+
+## thunks -> una acción que es asíncrona que dispara otra acción una vez que resulve 'la petición' = middleware
+
+## RTK Query ##
+- Sirve para hacer peticiones a los endpoints, apis... No es sustituto del fetch, axios!
+- A groso modo, nos sirve para evitar traer de nuevo informaciones duplicadas o peticiones que ya se encuentran en nuestro caché. Es decir, se hizo para optimizar las peticiones http
+
+Ventajas:
+* Tracking loading state in order to show UI spinners
+* Avoiding duplicate requests for the same data
+* Optimistic updates to make the UI feel faster
+* Managing cache lifetimes as the user interacts with the UI

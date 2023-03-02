@@ -1,7 +1,7 @@
 import { useSelector, useDispatch } from "react-redux";
 import { increment, decrement, incrementBy } from "./store/slices/counter";
 
-function App() {
+function CounterApp() {
   // De todos los posibles state de mi app, selecciono el counter
   const { counterValue } = useSelector((state) => state.counter);
   const dispatch = useDispatch();
@@ -36,10 +36,10 @@ function App() {
           dispatch(incrementBy(2));
         }}
       >
-        IncrementBy2
+        IncrementBy
       </button>
     </>
   );
 }
 
-export default App;
+export default CounterApp;
