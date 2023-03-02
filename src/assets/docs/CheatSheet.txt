@@ -1,0 +1,13 @@
+## ¿Qué es Redux?
+-> Es un contenedor predecible del estado de nuestra aplicación. Es decir, sabemos de antemano donde se encuentra la toda la información de mi app en todo momento y de vía única para acuidr a ella y modificarla. 
+
+-> El patron Redux es una forma de mantener el/los estados de nuestra aplicación. https://redux.js.org/
+
+- Redux no es propio de React o de cualquier otro framework y/o librería (Angular, Vue, Flutter)
+
+# React Redux -> 'Redux personalizado para React' 
+# Redux Toolkit -> Herramientas para implementar el Redux en nuestra app, además cuenta con RTK Query (para dar seguimiento a las peticiones http, manejar el cache, "(...) a powerful data fetching and caching capability that we've dubbed")
+
+
+useSlector() -> me permite seleccionar los distintos estados
+useDispatch() -> despachar la accion
