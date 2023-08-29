@@ -4,8 +4,10 @@ export const pokemonSlice = createSlice({
   name: "pokemons",
   initialState: {
     nextPage: 0,
+    prevPage: 0,
     isLoading: false,
     pokelist: [],
+    pokeImg: "",
   },
   reducers: {
     startLoadingPokemons: (state) => {
@@ -13,11 +15,12 @@ export const pokemonSlice = createSlice({
     },
     setPokemons: (state, action) => {
       state.isLoading = false;
-      state.nextPage = action.payload.nextPage;
       state.pokelist = action.payload.pokelist;
+      state.nextPage = action.payload.nextPage;
+      state.prevPage = action.payload.prevPage;
+      state.pokeImg = action.payload;
     },
   },
 });
-// Un thunk sería una función que va a ejecutar una tarea y cunado lo termine va a dar lugar a una acción en nuestro reducer. Pues en este caso sería, cuando termine de hacer la petición da paso a "startLoadingPokemons, setPokemons ..."
-
+//Una vez que el thunk termine de realizar las peticiones y obtenr los datos, entoces sí, se ejecutan los reducers definidos
 export const { startLoadingPokemons, setPokemons } = pokemonSlice.actions;

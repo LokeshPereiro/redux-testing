@@ -3,6 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 // El Slice, como podemos ver, es tan solo una función que recibe un objeto
 export const counterSlice = createSlice({
   name: "counter",
+  //Este obj es mi state
   initialState: {
     counterValue: 10,
   },

@@ -5,7 +5,7 @@ import {
 } from "./store/rtk-apis/todosApi";
 
 const TodoAppRTK = () => {
-  //   const { data, isLoading, isFetching } = useGetTodosQuery();
+  // const { data, isLoading, isFetching } = useGetTodosQuery();
   const [todoId, setTodoId] = useState(1);
   const {
     data: singleTodo,
@@ -16,6 +16,7 @@ const TodoAppRTK = () => {
   const nextTodo = () => {
     setTodoId(todoId + 1);
   };
+
   const prevTodo = () => {
     if (todoId === 1) return;
     setTodoId(todoId - 1);
