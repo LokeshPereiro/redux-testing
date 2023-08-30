@@ -8,7 +8,7 @@ export const store = configureStore({
     counter: counterSlice.reducer,
     pokemons: pokemonSlice.reducer,
 
-    // RTK - Query
+    // RTK - Query --> Propiedad computada
     [todosApi.reducerPath]: todosApi.reducer,
   },
   middleware: (getDefaultMiddleware) =>

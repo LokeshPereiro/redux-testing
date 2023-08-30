@@ -12,7 +12,7 @@ const TodoAppRTK = () => {
     isLoading,
     isFetching,
   } = useGetTodoByIdQuery(todoId);
-  //   console.log(singleTodo);
+
   const nextTodo = () => {
     setTodoId(todoId + 1);
   };
@@ -25,22 +25,41 @@ const TodoAppRTK = () => {
   return (
     <>
       <h1>Todo - RTK Query</h1>
+      {isLoading && <span className="alert alert-danger">Loading...</span>}
       <hr />
       <pre>{JSON.stringify(singleTodo, null, 3)}</pre>
-      <button className="btn btn-outline-danger" onClick={prevTodo}>
-        Prev
-      </button>
-      <button className="btn btn-outline-success" onClick={nextTodo}>
-        Next
-      </button>
-      {/* {data?.map((todo) => {
-        return (
-          <li key={todo.id}>
-            <strong>{todo.completed ? "DONE" : "Pending"} </strong>
-            {todo.title}
-          </li>
-        );
-      })} */}
+      <div className="d-flex justify-content-between">
+        <button className="btn btn-outline-danger" onClick={prevTodo}>
+          Prev
+        </button>
+        <button className="btn btn-outline-success" onClick={nextTodo}>
+          Next
+        </button>
+      </div>
+      {/* <table>
+        <tr>
+          <th>
+            <i>TODOS</i>
+          </th>
+          <th>
+            <i>STATUS</i>
+          </th>
+        </tr>
+        {data?.map((todo) => {
+          return (
+            <tr key={todo.id}>
+              <td>{todo.title}</td>
+              <td>
+                {todo.completed ? (
+                  <span className="text-success">Done</span>
+                ) : (
+                  <span className="text-warning">Pending</span>
+                )}
+              </td>
+            </tr>
+          );
+        })}
+      </table> */}
     </>
   );
 };

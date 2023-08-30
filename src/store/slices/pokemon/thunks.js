@@ -31,7 +31,6 @@ export const getPokemonsApi = (page = 0) => {
         pokelist: data.results,
         nextPage: page + 1,
         prevPage: page - 1,
-        // pokeImg: restImgs,
       })
     );
   };

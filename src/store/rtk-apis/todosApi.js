@@ -1,12 +1,13 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 export const todosApi = createApi({
+  //Nombre del 'reducer'
   reducerPath: "todos",
-  //   Se podría mandar custom headers en el caso de authentificación
+  //La url base
   baseQuery: fetchBaseQuery({
     baseUrl: "https://jsonplaceholder.typicode.com",
   }),
-  //   Mis endpoints teniendo en cuenta la baseURL
+  // Mis distintos endpoints teniendo en cuenta la baseURL
   endpoints: (builder) => ({
     getTodos: builder.query({
       query: () => "/todos",

@@ -7,7 +7,6 @@ export const pokemonSlice = createSlice({
     prevPage: 0,
     isLoading: false,
     pokelist: [],
-    pokeImg: "",
   },
   reducers: {
     startLoadingPokemons: (state) => {
